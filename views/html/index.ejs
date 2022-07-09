@@ -1,19 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 
-        
-    <%- include ('../partials/head', {title: title}) %>
-    <%- include ('../partials/navbar', {title: title}) %> 
+
+<%- include ('../partials/head', {title: title}) %>
+<%- include ('../partials/navbar', {title: title}) %>
 
 <body>
 
-<div class="container-fluid">
+  <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-sm col-xs">
-            the body 
+      <div class="col-sm col-xs">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col-sm col-xs">
+              <div class="form-group">
+                <label for="qrURL">Enter URL: </label>
+                <input class="form-control qrProperty" data-qr-property="text" type="url" name="qrURL" id="qrURL">
+              </div>
+            </div>
+          </div>
+
+         <!-- <div class="row">
+            <div class="col-sm col-xs">
+              <div class="form-group">
+                <label for="qrText">QR Code text: </label>
+                <textarea class="form-control qrProperty" data-qr-property="text" type="text" name="qrText" id="qrText"></textarea>
+                </div>
+              </div>
+          </div> !-->
+
+          <div class="row">
+           
+
+            <div class="col-sm col-xs">
+              <div class="form-group">
+                <label for="qrSize">Size: </label>
+                <input class="form-control qrProperty" data-qr-property="size" type="number" name="qrSize" id="qrSize">
+              </div>
+            </div>
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrMargin">Margin: </label>
+                  <input class="form-control qrProperty" data-qr-property="margin" type="number" name="qrMargin" id="qrMargin">
+                </div>
+            </div>
+
+            <!-- <div class="col-sm col-xs">
+                <div class="form-check">
+                  <input class="form-check-input qrProperty" data-qr-property="whiteMargin" type="checkbox" name="qrwhiteMargin" id="qrwhiteMargin">
+                  <label class="form-check-label" for="qrwhiteMargin"  >White margin </label>
+
+                </div>
+            </div> !-->
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrcorrectLevel">Correct level: </label>
+                  <input class="form-control qrProperty" data-qr-property="correctLevel" type="number" name="qrCorrectLevel" id="qrCorrectLevel">
+                </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+           
+
+            <div class="col-sm col-xs">
+              <div class="form-group">
+                <label for="qrmaskPattern">Mask pattern: </label>
+                <input class="form-control qrProperty" data-qr-property="maskPattern" type="number" name="qrmaskPattern" id="qrmaskPattern">
+              </div>
+            </div>
+
+            
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrscale">Block scale: </label>
+                  <input class="form-control qrProperty" data-qr-property="scale" value ="8" type="number" name="qrscale" id="qrscale">
+                </div>
+            </div>
+
+            <!-- <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrversion">Version: </label>
+                  <input class="form-control qrProperty" data-qr-property="version" type="number" name="qrversion" id="qrversion">
+                </div>
+            </div> !-->
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrcolorDark">Color dark: </label>
+                  <input class="form-control qrProperty" data-qr-property="colorDark" type="color" name="qrcolorDark" id="qrcolorDark">
+                </div>
+            </div>
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrcolorLight">Color light: </label>
+                  <input class="form-control qrProperty" data-qr-property="colorLight" type="color" name="qrcolorLight" id="qrcolorLight">
+                </div>
+            </div>
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrbackgroundDimming">Background dimming: </label>
+                  <input class="form-control qrProperty" data-qr-property="backgroundDimming" type="color" name="qrbackgroundDimming" id="qrbackgroundDimming">
+                </div>
+            </div>
+
+           <!-- <div class="col-sm col-xs">
+                <div class="form-group mt-auto">
+                  <label for="qrautoColor">Auto colour: </label>
+                  <input class="form-check-input qrProperty" data-qr-property="autoColor" type="checkbox" name="qrautoColor" id="qrautoColor">
+                </div>
+            </div> !-->
+
+          </div>
+
+          <div class="row">
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrbackgroundImage">Background image: </label>
+                  <input class="form-control qrProperty" data-qr-property="backgroundImage" type="file" name="qrbackgroundImage" id="qrbackgroundImage">
+                </div>
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrlogoImage">Logo image: </label>
+                  <input class="form-control qrProperty" data-qr-property="logoImage" type="file" name="qrlogoImage" id="qrlogoImage">
+                </div>
+            </div>
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrlogoScale">Logo scale: </label>
+                  <input class="form-control qrProperty" data-qr-property="logoScale" value ="0.2" type="number" name="qrlogoScale" id="qrlogoScale">
+                </div>
+            </div>
+
+
+            <div class="col-sm col-xs">
+                <div class="form-group">
+                  <label for="qrlogoCornerRadius">Logo corner radius: </label>
+                  <input class="form-control qrProperty" data-qr-property="logoCornerRadius" value ="8" type="number" name="qrlogoCornerRadius" id="qrlogoCornerRadius">
+                </div>
+            </div>
+            
+          </div>
+
+          <div class="row">
+            <div class="col-sm col-xs">
+              <div id="qrImage">
+
+              </div>
+            </div>
+
+          </div>
         </div>
+      </div>
     </div>
-</div>
-    
+  </div>
+
+  <script src="/js/index.js"></script>
 </body>
+
 </html>
